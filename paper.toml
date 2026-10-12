@@ -1,0 +1,15 @@
+title = "Boundaries of attractors with bounded noise: boundary maps, normal hyperbolicity and singularities"
+authors = [
+    "John Parry",
+]
+status = "drafting"
+journal = ""
+arxiv = ""
+github = ""
+citekeys = []
+
+[build]
+main = "writeup/esa_report.tex"
+bib = "refs.bib"
+figures = ""
+pdf_name = "esa.pdf"

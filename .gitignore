@@ -1,0 +1,33 @@
+# LaTeX build artefacts, wherever they land (the PDF is published as a
+# release asset by CI, never committed)
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+*.xdv
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# Never commit third-party PDFs
+*.pdf
+!figures/*.pdf
+
+# figures live next to the report, not in figures/
+!writeup/fig_*.pdf
