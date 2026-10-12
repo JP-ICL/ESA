@@ -49,28 +49,6 @@ jobs:
           git commit -q -m "Build of $GITHUB_SHA"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" pdf
 
-      - name: Refresh the review branch (if `paper review` set one up)
-        if: github.ref == 'refs/heads/main'
-        run: |
-          set -e
-          remote="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}"
-          if ! git ls-remote --exit-code --heads "$remote" review >/dev/null 2>&1; then
-            echo "no review branch; skipping"; exit 0
-          fi
-          work=$(mktemp -d)
-          git clone -q --branch review --single-branch "$remote" "$work"
-          find "$work" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-          git ls-files -z -- '*.tex' '*.bib' | while IFS= read -r -d '' f; do
-            mkdir -p "$work/$(dirname "$f")" && cp "$f" "$work/$f"
-          done
-          cd "$work"
-          git add -A
-          if git diff --cached --quiet; then echo "review branch already current"; exit 0; fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -q -m "Review snapshot of ${GITHUB_SHA::7}"
-          git push -q origin review
-
       - name: Move the draft tag to this commit
         if: github.ref == 'refs/heads/main'
         run: |
