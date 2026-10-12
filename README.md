@@ -4,7 +4,7 @@
 
 John Parry
 
-**Status:** drafting · **Latest PDF:** [view](https://github.com/JP-ICL/ESA/blob/pdf/esa.pdf) · [download](https://github.com/JP-ICL/ESA/releases/download/draft/esa.pdf)
+**Status:** drafting · **Latest PDF:** [view](https://github.com/JP-ICL/ESA/blob/pdf/esa.pdf) · [download](https://github.com/JP-ICL/ESA/releases/download/draft/esa.pdf) · **Comments:** [review PR](https://github.com/JP-ICL/ESA/pull/1/files)
 
 ## Abstract
 
