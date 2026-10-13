@@ -261,28 +261,6 @@ $\partial A$ and hence orthogonal to $n$.
 The contact property has a symplectic origin. Replace unit normals by unnormalised covectors (costates)
 $p\in\R^d\setminus\{0\}$.
 
-\begin{lemma}[symplectic lift: the discrete Pontryagin map]\label{lem:pontryagin}\note{[added] Not in the notes.}
-The map $\tilde\beta_{f,\eps}:T^*\R^d\setminus0\to T^*\R^d\setminus0$,
-\[
-  \tilde\beta_{f,\eps}(x,p)=\Bigl(f(x)+\eps\frac{P}{\|P\|},\ P\Bigr),\qquad P=Df(x)^{-T}p,
-\]
-is exact symplectic, $\tilde\beta^*(P\cdot dX)=p\cdot dx$, and commutes with the dilations $p\mapsto cp$, $c>0$. Its
-quotient by dilations is $\beta_{f,\eps}$ on the cosphere bundle $\R^d\times\Sph^{d-1}$.
-\end{lemma}
-\begin{proof}
-$P\cdot dX=P\cdot Df(x)\,dx+\eps P\cdot d(P/\|P\|)=(Df(x)^TP)\cdot dx+0=p\cdot dx$, because $P\perp d(P/\|P\|)$.
-Homogeneity is clear.
-\end{proof}
-
-$\tilde\beta$ is exactly the discrete-time extremal map of the Pontryagin maximum principle for the control system
-$x_{i+1}=f(x_i)+u_i$, $\|u_i\|\le\eps$. The costate evolves by the adjoint equation $p_i=Df(x_i)^Tp_{i+1}$, and the control
-maximises $\langle p_{i+1},u\rangle$ over the ball, giving $u_i=\eps\,p_{i+1}/\|p_{i+1}\|$. So attractor boundaries are
-swept out by extremals, and ``think in symplectic terms, write in contact terms'' is literally the passage from
-$\tilde\beta$ to $\beta$ (symplectisation). In continuous time, for $\dot x=F(x)+u$ with $\|u\|\le\eps$ (bounded-noise
-random differential equations~\cite{HY10}), the analogue is the Hamiltonian flow of
-$H(x,p)=\langle p,F(x)\rangle+\eps\|p\|$, the \emph{Pontryagin flow}~\cite{PBGM62,AS04}, which descends to a contact flow on
-$\R^d\times\Sph^{d-1}$.
-
 \subsection{Hyperbolicity, invariant manifolds and persistence}
 A fixed point $p$ of a $C^1$ map $T$ is hyperbolic if $\sigma(DT(p))\cap\{|z|=1\}=\emptyset$. The stable and unstable
 manifold theorem~\cite{KH95} then gives $C^1$ manifolds $W^{s,u}(p)$ with $T_pW^{s,u}=E^{s,u}$. More generally, a compact
@@ -445,7 +423,7 @@ $w_2=\eps\mu/(\mu-\lambda_2)=R$. At $q_+$ with eigenvalue $\mu^{-1}$ we need $(\
 $w_1=-\tilde R$. The remaining eigenvectors are immediate since $L$ is diagonal.
 \end{proof}
 
-\begin{remark}[the $\pm$ symmetry]\label{rem:symmetry}\note{[added] Answers the question ``why do we have this symmetry, and when does it break?'' raised in the notes.}
+\begin{remark}[the $\pm$ symmetry]\label{rem:symmetry}
 The involution $\sigma(x,n)=(-x,-n)$ satisfies $\beta_{f,\eps}\circ\sigma=\sigma\circ\beta_{f,\eps}$ whenever $f$ is
 odd, $f(-x)=-f(x)$: then $Df(-x)=Df(x)$ and $\beta_{f,\eps}(-x,-n)=-\beta_{f,\eps}(x,n)$. This is why $p_+\leftrightarrow p_-$
 and $q_+\leftrightarrow q_-$ share spectra, with $D\sigma=\diag(-1,-1,1)$ mapping the eigenvectors as in

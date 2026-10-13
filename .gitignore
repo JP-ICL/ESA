@@ -31,3 +31,6 @@ __pycache__/
 
 # figures live next to the report, not in figures/
 !writeup/fig_*.pdf
+
+# Stashed content
+writeup/sections/*
