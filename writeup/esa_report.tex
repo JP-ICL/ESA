@@ -43,29 +43,18 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-\noindent Random dynamical systems with bounded noise have attractors that are compact sets with non-empty interior. Their
-shape, and in particular the regularity of their boundaries, governs how they change under perturbation. The
-\emph{boundary map} lifts the set-valued dynamics to a single-valued map on the unit normal bundle
-$\R^d\times\Sph^{d-1}$, where it is a conformal contactomorphism. The boundary of the attractor lifts to an invariant
-Legendrian submanifold. The project studies when this Legendrian submanifold is normally hyperbolic (and hence the
-boundary is $C^2$-persistent), how normal hyperbolicity is lost, and which singularities (wedges, cusps) appear on the
-perturbed boundary when it is. This report sets out the problem and background and then analyses the planar diagonal
-linear case in full. We find the fixed points of the boundary map, their spectra and eigenvectors, and the global
-heteroclinic structure of the invariant normal bundle. We show that normal hyperbolicity fails under any definition at the resonance
-$\lambda_1=\lambda_2^2$ (Task~1 of the project), and that with uniform rates it holds if and only if
-$\lambda_1>\lambda_2^2$. In that case the curvature of $\partial A$ at its flattest points equals
-$(\lambda_1-\lambda_2^2)/(\eps\lambda_1)$, and it vanishes otherwise. The spectra at fixed points obey a contact pairing rule
-$\{\rho\}\cup\{\nu,\rho/\nu\}$, and in these terms the resonance is a collision within a conformally symplectic eigenvalue
-pair. Numerical computations in \textsc{JAX} confirm the results. We close with a plan for the nonlinear resonant
-perturbation $f(x)=(\lambda^2x_1+ax_2^2,\lambda x_2)$ and its singularities, and with two broader strands: a
-\emph{linear contact algebra} of boundary maps, and the realisation of boundary maps as \emph{Pontryagin extremal
-flows} of control systems.
+    We look at random dynamics; systems which have bounded noise. A certain class of dynamics lead to attractors which are compact and non-empty. We are interested in the formation of these attractors, and their stability under perturbation. The main object of interest is the associated \emph{boundary map}, which lifts the set-valued dynamics on $\R^{d}$ to single-valued dynamics on the unit normal bundle $\R^d \times \Sph^{d-1}.$ We look at the representation of the boundary of the attractor in this space, where it is realised as a Legendrian submanifold. 
+
+    We investigate the normal hyperbolicity of the Legendrian submanifold, and the robustness of this structure. We start by looking at the planar diagonal linear case, and introduce resonance to exhibit the breakdown of normal hyperbolicity. We later discuss this more generally. 
+
+    In the final sections - we outline possible directions in this area - including local contact linear algebra, and Pontryagin flows of control systems. 
 \end{abstract}
 
 \tableofcontents
 
 %=============================================================================
 \section{Introduction and problem statement}\label{sec:intro}
+Real-world noise often comes in bounded form, for instance sensor accurate intervals, or rounding errors. When noise is bounded, trajectories can become trapped in a bounded invariant set. \note{These attractors support ergodic stationary measures that describe the system's statistics, and their bifurcations are topological: they occur when minimal invariant sets, which collide with, or detach from, other invariant objects. -> what does this mean? Ergodic stationary measure? system's statistics?} Understanding the \emph{shape} of these attractors is a prerequisite for a bifurcation theory of bounded-noise systems.  
 
 When the noise is \emph{bounded}, trajectories are typically trapped in bounded invariant
 sets from which escape is impossible. These attractors support the ergodic stationary measures that describe the
