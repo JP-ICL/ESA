@@ -58,15 +58,15 @@ Real-world noise often comes in bounded form, for instance sensor accurate inter
 
 \noindent We study iterations
 \begin{equation}\label{eq:rds}
-  x_{i+1} = f(x_i) + \xi_i,\qquad x_i\in\R^d,
+    x_{i+1} = f(x_i) + \xi_i,\qquad x_i\in\R^d, \qquad \xi_{i} \in \overline{B_{\epsilon}(0)}
 \end{equation}
-where $f$ is a diffeomorphism and the $\xi_i$ are i.i.d.\ random variables supported on the closed ball of radius
+where $f$ is a diffeomorphism and the $\xi_i$ are i.i.d. random variables supported on the closed ball of radius
 $\eps$. The \emph{compound} dynamics are captured by the set-valued map
 \[
   F_{f,\eps}(C) = B_\eps(f(C)) = \{f(x)+y : x\in C,\ \|y\|\le\eps\},
 \]
-acting on non-empty compact sets. Attractors of~\eqref{eq:rds}, that is, compact sets that are attracting and minimally
-forward invariant, are fixed points of $F_{f,\eps}$; in the linear case the fixed point is unique and globally
+acting on $C \in \mathcal{K}(\R^n)$, the space of compact sets on $\R^n$. Attractors of~\eqref{eq:rds} - compact sets which are attracting and minimally forward invariant -
+forward are fixed points of $F_{f,\eps}$; in the linear case the fixed point is unique and globally
 attracting~\cite{LRT23,LRR15}.
 
 \paragraph{The boundary map.}
@@ -96,7 +96,12 @@ points, and $\Nb$ is no longer a graph over $\Sph^1$: the three blue points in (
 \label{fig:normal-bundle}
 \end{figure}
 
+\paragraph{Convexity.}
+We begin by considering a linear contraction, where in this specific case it can be shown that the attractor is convex \note{ref Tei, Lamb linear map here}, and that the boundary of the attractor is smooth. This is a consequence of the linear contractive dynamics, but more generally we can loosen these constraints \note{ref Kourliouros normal hyperbol -> thm 1.2}.  
+
 \paragraph{The dual picture: support functions.}
+
+
 Convexity is a statement about the other projection of $\Nb$, namely $(x,n)\mapsto n$. If $A$ is strictly convex,
 every local normal $n(x)$, the annihilator of $T_x\partial A$, is also a global supporting covector, the Gauss map
 $x\mapsto n(x)$ is a bijection $\partial A\to\Sph^{d-1}$, and $\partial A$ is recovered from the support function
