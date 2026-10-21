@@ -63,7 +63,7 @@ Real-world noise often comes in bounded form, for instance sensor accurate inter
 where $f$ is a diffeomorphism and the $\xi_i$ are i.i.d. random variables supported on the closed ball of radius
 $\eps$. The \emph{compound} dynamics are captured by the set-valued map
 \[
-  F_{f,\eps}(C) = B_\eps(f(C)) = \{f(x)+y : x\in C,\ \|y\|\le\eps\},
+    F_{f,\eps}(C) = \overline{B_\eps(f(C))} = \{f(x)+y : x\in C,\ \|y\|\le\eps\},
 \]
 acting on $C \in \mathcal{K}(\R^n)$, the space of compact sets on $\R^n$. Attractors of~\eqref{eq:rds} - compact sets which are attracting and minimally forward invariant -
 forward are fixed points of $F_{f,\eps}$; in the linear case the fixed point is unique and globally
@@ -78,10 +78,12 @@ The set-valued dynamics is lifted by the boundary map whose to the domain $\Nb=\
 
  \note{Tei \& Kourliouros demonstrate that we can look at invariants of the boundary map and infer properties of the underlying set-valued system - ref.}
 
-\note{Tei - ref} demonstrates the behaviour of the boundary map when our underlying dynamics is given by a linear contraction. \note{Talk about Kourliouros (ref) looking at the role of normal hyperbolciity, and how this appears in linear paper.} 
+\note{Tei - ref} demonstrates the behaviour of the boundary map when our underlying dynamics is given by a linear contraction. \note{Talk about Kourliouros (ref) looking at the role of normal hyperbolciity, and how this manifests in linear paper.} 
 
-\paragraph{The problem.}
-Write $f=L+\varphi$ with $\varphi$ of higher order, and regard $F_{f,\eps}$ as a perturbation of $F_{L,\eps}$. The
+\paragraph{The problem.}Let $f=L+\varphi$ where $L \in GL(\R^n)$ is the linear component, and $\varphi$ is of higher order, and regard $F_{f,\eps}$ as a perturbation of $F_{L,\eps}$. In a compact set, the linear map and its perturbation are $C^2$-close (in fact they are $C^\infty$ close). We will show that whilst we have a $C^2$-perturbation,  without normal hyperbolicity as hypothesised in \note{Kourliouros main theory}, the theorem fails to hold. We then investigate further the singularities which emerge as a result of this loss of normal hyperbolicity. 
+
+
+The
 perturbed attractor $A'$ is Hausdorff-close to $A$. By the persistence results of~\cite{KLRTTT23}, if $\beta_{L,\eps}$
 is \emph{normally hyperbolic} at $\Nb$, then for $C^2$-small $\varphi$ the boundary $\partial A'$ is $C^2$-close to
 $\partial A$ ($C^2$-persistence). The core problem is the converse situation:
