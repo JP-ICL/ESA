@@ -8,4 +8,4 @@ John Parry
 
 ## Abstract
 
-We look at bounded random dynamical systems - a class of dynamics which have spherical bounded noise injected at every iteration. Building on from the work of <span class="sans-serif">\[Draft note: Tei / Kourliouros - cite\]</span>, we look at a particular case of driving dynamics: linear contraction with quadratic resonance. We use this toy example to investigate the breakdown of normal hyperbolicity, and the resulting singularities which emerge as a result.
+We look at bounded random dynamical systems - a class of dynamics which have spherical bounded noise injected at every iteration. Building on from the work of <span class="sans-serif">\[Draft note: Tey / Kourliouros - cite\]</span>, we look at a particular case of driving dynamics: linear contraction with quadratic resonance. We use this toy example to investigate the breakdown of normal hyperbolicity, and the resulting singularities which emerge as a result.
