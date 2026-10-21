@@ -70,16 +70,15 @@ forward are fixed points of $F_{f,\eps}$; in the linear case the fixed point is 
 attracting~\cite{LRT23,LRR15}.
 
 \paragraph{The boundary map.}
-If an attractor $A$ is convex with smooth boundary, each boundary point $x$ has a unique outward unit normal $n(x)$,
-and $\partial A$ lifts to the \emph{unit normal bundle} $\Nb=\{(x,n(x)): x\in\partial A\}\subset\R^d\times\Sph^{d-1}$ (\cref{fig:normal-bundle}).
-The \emph{boundary map}~\cite{KLRTTT23,Tey22}
+The set-valued dynamics is lifted by the boundary map whose to the domain $\Nb=\{(x,n(x)): x\in\partial A\}\subset\R^d\times\Sph^{d-1}$ - the set of points with their outward unit normals. The boundary map is given by
+
 \begin{equation}\label{eq:boundary-map}
-  \beta_{f,\eps}(x,n) = \Bigl(f(x) + \eps\,\frac{Df(x)^{-T}n}{\|Df(x)^{-T}n\|},\ \frac{Df(x)^{-T}n}{\|Df(x)^{-T}n\|}\Bigr)
+  \beta_{f,\eps}(x,n) = \Bigl(f(x) + \eps\,\frac{Df(x)^{-T}n}{\|Df(x)^{-T}n\|},\ \frac{Df(x)^{-T}n}{\|Df(x)^{-T}n\|}\Bigr).
 \end{equation}
-is a single-valued map that leaves $\Nb$ invariant. It turns the set-valued problem into a classical one about an
-invariant submanifold of a diffeomorphism. For linear $f=L$ with spectral radius $\rho(L) < 1$, Lamb, Rasmussen and
-Tey~\cite{LRT23} showed that the attractor is unique, strictly convex and $C^1$, and that $\Nb$ is \emph{globally
-attracting} for $\beta_{L,\eps}$.
+
+ \note{Tei \& Kourliouros demonstrate that we can look at invariants of the boundary map and infer properties of the underlying set-valued system - ref.}
+
+\note{Tei - ref} demonstrates the behaviour of the boundary map when our underlying dynamics is given by a linear contraction. \note{Talk about Kourliouros (ref) looking at the role of normal hyperbolciity, and how this appears in linear paper.} 
 
 \begin{figure}[htbp]
 \centering
@@ -97,6 +96,8 @@ points, and $\Nb$ is no longer a graph over $\Sph^1$: the three blue points in (
 \end{figure}
 
 \paragraph{Convexity.}
+
+
 We begin by considering a linear contraction, where in this specific case it can be shown that the attractor is convex \note{ref Tei, Lamb linear map here}, and that the boundary of the attractor is smooth. This is a consequence of the linear contractive dynamics, but more generally we can loosen these constraints \note{ref Kourliouros normal hyperbol -> thm 1.2}.  
 
 \paragraph{The dual picture: support functions.}
