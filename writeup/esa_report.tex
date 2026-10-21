@@ -80,20 +80,14 @@ The set-valued dynamics is lifted by the boundary map whose to the domain $\Nb=\
 
 \note{Tei - ref} demonstrates the behaviour of the boundary map when our underlying dynamics is given by a linear contraction. \note{Talk about Kourliouros (ref) looking at the role of normal hyperbolciity, and how this manifests in linear paper.} 
 
-\paragraph{The problem.}Let $f=L+\varphi$ where $L \in GL(\R^n)$ is the linear component, and $\varphi$ is of higher order, and regard $F_{f,\eps}$ as a perturbation of $F_{L,\eps}$. In a compact set, the linear map and its perturbation are $C^2$-close (in fact they are $C^\infty$ close). We will show that whilst we have a $C^2$-perturbation,  without normal hyperbolicity as hypothesised in \note{Kourliouros main theory}, the theorem fails to hold. We then investigate further the singularities which emerge as a result of this loss of normal hyperbolicity. 
-
-
-The
-perturbed attractor $A'$ is Hausdorff-close to $A$. By the persistence results of~\cite{KLRTTT23}, if $\beta_{L,\eps}$
-is \emph{normally hyperbolic} at $\Nb$, then for $C^2$-small $\varphi$ the boundary $\partial A'$ is $C^2$-close to
-$\partial A$ ($C^2$-persistence). The core problem is the converse situation:
+\paragraph{The problem.}Let $f=L+\varphi$ where $L \in GL(\R^n)$ is the linear component, and $\varphi$ is of higher order, and regard $F_{f,\eps}$ as a perturbation of $F_{L,\eps}$. In a compact set, the linear map and its perturbation are $C^2$-close (in fact they are $C^\infty$ close). We will show that whilst we have a $C^2$-perturbation,  without normal hyperbolicity as hypothesised in \note{Kourliouros main theory}, the theorem fails to hold. We then investigate further the singularities which emerge as a result of this loss of normal hyperbolicity. The core problem is the converse situation:
 \begin{quote}
-\emph{How is normal hyperbolicity of the boundary map lost, and which singularities appear on the boundaries of the
-perturbed attractors (and on their Legendrian lifts and fronts) when it is?}
+\emph{When is normal hyperbolicity of the boundary map lost, and which singularities manifest as a result?} 
 \end{quote}
+
 In the plane, the first singularities expected on the boundary are wedges, that is, self-intersection points
 ($A_1$ in the terminology of the task sheet\footnote{In Arnold's notation a transverse double point of a front is the
-multigerm $A_1^2$; $A_1$ alone denotes a regular point.}, cf.~\cite{Arn90}). The full front may additionally carry cusps ($A_2$). Concretely: 
+multigerm $A_1^2$; $A_1$ alone denotes a regular point.}, cf.~\cite{Arn90}). The full front may additionally carry cusps ($A_2$). We will show that these emerge as artefacts of the front projection from the Legendrian submanifold. Concretely: 
 
 \begin{enumerate}[label=\textbf{Task \arabic*.},leftmargin=*]
   \item For $L=\diag(\lambda_1,\lambda_2)$ with $0<\lambda_1<\lambda_2<1$ and $\lambda_2^2=\lambda_1$, show that
@@ -104,21 +98,6 @@ multigerm $A_1^2$; $A_1$ alone denotes a regular point.}, cf.~\cite{Arn90}). The
   $\mathcal{L}'$ and its front.
 \end{enumerate}
 
-Viewing the task sheet as an instance of something more general suggests two further strands, developed in
-\cref{sec:strands}:
-\begin{enumerate}[label=\textbf{(\Alph*)},leftmargin=*]
-  \item \textbf{Linear contact algebra.} Linear symplectic algebra constrains the spectra of symplectic maps
-  ($\nu\leftrightarrow1/\nu$) and organises their normal forms and bifurcations (Krein collisions). The analogous
-  question for contactomorphisms is which geometry the contact structure forces on the linearisation at fixed and
-  periodic points, and how much of the singularity picture it predicts.
-  \item \textbf{Pontryagin flows and control.} The set-valued map $F_{f,\eps}$ is a control system
-  $x_{i+1}=f(x_i)+u_i$, $\|u_i\|\le\eps$, whose attractor is a reachable set. The boundary map is the spherised
-  extremal map of Pontryagin's maximum principle. This links attractor boundaries to the geometric theory of optimal
-  control and reachable sets.
-\end{enumerate}
-
-This report gives background (\cref{sec:background}), presents preliminary results for the linear diagonal case,
-which settle Task~1 and illustrate both strands (\cref{sec:results}), and describes the plan (\cref{sec:plan}).
 
 %=============================================================================
 \section{Background and literature}\label{sec:background}
